@@ -1,7 +1,9 @@
 --file: wifi.lua
+--module that connects to a wifi network
 
 local module = {}
 
+--waits for valid IP, then prints details 
 local function wifi_wait()
   if wifi.sta.getip() == nil then
     print("Waiting for IP...")
@@ -14,6 +16,7 @@ local function wifi_wait()
     print("=====")
   end
 end
+
 
 function module.wifi_start(conf)
   if conf then
